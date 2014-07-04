@@ -229,3 +229,22 @@
 
     };
 })(jQuery);
+
+
+$("html").keyup(function(event){
+    if($(":submit").is(":visible") ){
+        if(event.keyCode == 13){
+            $(":submit")[0].click();
+        }
+    }
+    else if($("#customNextButton").length && $("#customNextButton").is(":visible")){
+        if(event.keyCode == 13){
+            $("#customNextButton").click();
+        }
+    }
+    else if($("#form-wizard-next").length && $("#form-wizard-next").is(":visible")){
+        if(event.keyCode == 13){
+            $("#form-wizard-next").click();
+        }
+    }
+});
